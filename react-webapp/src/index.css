@@ -347,14 +347,6 @@ table td {
   background-color: var(--COLOR_BLUE);
 }
 
-.manageButtons .fa-trash{
-  background-color: var(--COLOR_RED);
-}
-
-.manageButtons .fa-pen{
-  background-color: var(--COLOR_GREEN);
-}
-
 /* Images */
 .picture>*{
   display: block;

@@ -37,19 +37,12 @@ export default function FarmDetails() {
                     <thead>
                         <tr className="thead">
                             <th scope="col">Name</th>
-                            <th scope="col">Edit</th>
                         </tr>
                     </thead>
                     <tbody>
                         {farm.fields.map((item, index) => (
                             <tr key={`row${index}`}>
                                 <td key={`nameField${index}`}>{item.name}</td>
-                                <td data-label="manage">
-                                    <div className="manageButtons">
-                                        <i className="fa-solid fa-pen"></i>
-                                        <i className="fa-solid fa-trash"></i>
-                                    </div>
-                                </td>
                             </tr>
                         ))}
                     </tbody>
@@ -76,8 +69,6 @@ export default function FarmDetails() {
                                 <td data-label="manage">
                                     <div className="manageButtons">
                                         <NavLink to={`worker/${item.worker.workerID}`}><i className="fa-solid fa-info"></i></NavLink>
-                                        <i className="fa-solid fa-pen"></i>
-                                        <i className="fa-solid fa-trash"></i>
                                     </div>
                                 </td>
                             </tr>

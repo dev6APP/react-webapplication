@@ -43,8 +43,6 @@ export default function AdminFieldOwnerDetails() {
                                 <td key={`manage${index}`} data-label="manage">
                                     <div key={`manageButtons${index}`} className="manageButtons">
                                         <NavLink key={`infoLink${index}`} to={`farm/${item.farmID}`}><i key={`infoÌcon${index}`} className="fa-solid fa-info"></i></NavLink>
-                                        <i key={`penÌcon${index}`} className="fa-solid fa-pen"></i>
-                                        <i key={`trashÌcon${index}`} className="fa-solid fa-trash"></i>
                                     </div>
                                 </td>
                             </tr>

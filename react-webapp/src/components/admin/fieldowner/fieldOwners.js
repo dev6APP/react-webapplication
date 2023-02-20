@@ -40,8 +40,6 @@ export default function AdminFieldOwners() {
                             <td key={`manage${index}`} data-label="manage">
                                 <div className="manageButtons">
                                     <NavLink to={`/admin/adminFieldOwners/${item.fieldOwnerID}`}><i className="fa-solid fa-info"></i></NavLink>
-                                    <i className="fa-solid fa-pen"></i>
-                                    <i className="fa-solid fa-trash"></i>
                                 </div>
                             </td>
                         </tr>

@@ -41,8 +41,6 @@ export default function Farms() {
                                 <td key={`manage${index}`} data-label="manage">
                                     <div key={`manageButtonsIcon${index}`} className="manageButtons">
                                         <NavLink key={`manageInfoIconLink${index}`} to={`/farms/${item.farmID}`}><i key={`manageIcon${index}Info`} className="fa-solid fa-info"></i></NavLink>
-                                        <i key={`manageIcon${index}Pen`} className="fa-solid fa-pen"></i>
-                                        <i key={`manageIcon${index}Trash`} className="fa-solid fa-trash"></i>
                                     </div>
                                 </td>
                             </tr>
