@@ -1,4 +1,4 @@
-const baseUrl = "https://localhost:7113/api";
+const baseUrl = "https://dotnetbackendproject.azurewebsites.net/api";
 
 class DbAPI {
     static async getAccount(id) {
