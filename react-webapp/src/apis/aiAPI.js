@@ -1,14 +1,22 @@
-const baseUrl = "https://project4dev6.loca.lt/";
-const imagePlusStraberries = "api/data-strawberry?";
+
+const baseUrl = "https://object-detection-369309.ew.r.appspot.com/";
+const imagePlusStraberries = "image?";
 
 class AiAPI {
     static async getResultFromBase64(base64String) {
-        let url = baseUrl + imagePlusStraberries;
+        var details = { 'base64image': `data:image/jpeg;base64,${base64String}` };
+        var formBody = [];
+        for (var property in details) {
+            var encodedKey = encodeURIComponent(property);
+            var encodedValue = encodeURIComponent(details[property]);
+            formBody.push(encodedKey + "=" + encodedValue);
+        }
+        formBody = formBody.join("&");
         
-        let data = await fetch(url, { method: 'POST', headers: { Accept: '*/*', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'}, body: JSON.stringify({"image": base64String}),})
-            .then((res) => res.json())
-            .then((data) => data.result)
-            .then((consolea) => console.log(consolea))
+        const url = baseUrl + imagePlusStraberries;
+        
+        let data = await fetch(url, { method: 'POST', headers: { 'Accept': '*/*', 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }, body: formBody})
+            .then(res => res.text()) // convert to plain text
         return data;
     }
 }
